@@ -1,0 +1,33 @@
+<!-- 할 일 목록 (https://school.programmers.co.kr/learn/courses/30/lessons/181885?language=javascript)-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	function solution(todo_list, finished) {
+	    var answer = [];
+	    let a = 0;
+
+	    for (let i=0; i<todo_list.length; i++) {
+	    	if (finished[i] == false) {
+	    		answer[a] = todo_list[i];
+	    		a++;
+	    	}
+	    }
+
+	    return answer;
+	}
+
+	let todo_list = ["problemsolving", "practiceguitar", "swim", "studygraph"];
+	let finished = [true, false, true, false];
+	let result = solution(todo_list, finished);
+	for (let i=0; i<result.length; i++) {
+		document.write(result[i] + "<br>");
+	}
+</script>
+</body>
+</html>

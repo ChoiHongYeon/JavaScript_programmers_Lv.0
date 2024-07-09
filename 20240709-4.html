@@ -1,0 +1,38 @@
+<!-- 조건에 맞게 수열 변환하기 2 (https://school.programmers.co.kr/learn/courses/30/lessons/181881) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	function solution(arr) {
+
+	    var answer = 0;
+
+	    while (true) {
+	    	let arrr = arr.slice();
+	    	for (let i=0; i<arrr.length; i++) {
+	    		if (arrr[i] >= 50 && arrr[i] % 2 == 0)
+	    			arrr[i] /= 2;
+	    		else if (arrr[i] < 50 && arrr[i] % 2 == 1)
+	    			arrr[i] = arrr[i] * 2 + 1
+	    	}
+	    	if (arr.join() == arrr.join())
+	    		break;
+	    	else {
+	    		arr = arrr.slice();
+	    		answer++;
+	    	}
+	    }
+
+	    return answer;
+	    
+	}
+
+	document.write(solution([1, 2, 3, 100, 99, 98]));
+</script>
+</body>
+</html>

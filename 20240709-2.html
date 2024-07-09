@@ -1,0 +1,28 @@
+<!-- 수열과 구간 쿼리 1 (https://school.programmers.co.kr/learn/courses/30/lessons/181883) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	function solution(arr, queries) {
+	    
+		for (let i=0; i<queries.length; i++) {
+			for (let j=queries[i][0]; j<=queries[i][1]; j++) {
+				arr[j]++;
+			}
+		}
+
+	    return arr;
+	}
+
+	let result = solution([0, 1, 2, 3, 4], [[0, 1],[1, 2],[2, 3]])
+	for (let k=0; k<result.length; k++) {
+		document.write(result[k] + " ");
+	}
+</script>
+</body>
+</html>

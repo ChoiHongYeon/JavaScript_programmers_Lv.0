@@ -1,0 +1,32 @@
+<!-- 1로 만들기 (https://school.programmers.co.kr/learn/courses/30/lessons/181880?language=javascript) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	function solution(num_list) {
+
+	    var answer = 0;
+
+	    for (let i=0; i<num_list.length; i++) {
+	    	while (num_list[i] != 1) {
+	    		if (num_list[i] % 2 == 1)
+	    			num_list[i]--;
+	    		num_list[i] /= 2;
+	    		answer++;
+	    	}
+	    }
+
+	    return answer;
+
+	}
+
+	document.write(solution([12, 4, 15, 1, 14]));
+
+</script>
+</body>
+</html>

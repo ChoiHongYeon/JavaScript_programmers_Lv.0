@@ -1,0 +1,26 @@
+<!-- 원하는 문자열 찾기 (https://school.programmers.co.kr/learn/courses/30/lessons/181878?language=javascript) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	
+	function solution(myString, pat) {
+
+		let m = myString.toLowerCase();
+		let p = pat.toLowerCase();
+
+		return m.indexOf(p) >= 0 ? 1 : 0;
+
+	}
+
+	document.write(solution("AbCdEfG", "aBc") + "<br>");
+	document.write(solution("aaAA", "aaaaa"));
+
+</script>
+</body>
+</html>

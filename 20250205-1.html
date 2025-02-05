@@ -13,28 +13,49 @@
 	
 	function solution(array) {
 
+		if (array.length == 1)
+			return array[0];
+
 		array.sort();
 		let numbers = [];
+		let number = 0;
 		let n = 0;
-		let number = 1;
 
-		for (let i=1; i<array.length; i++) {
-			if (array[i - 1] != array[i]) {
-				numbers[n++] = number;
-				number = 1;
+		for (let i=0; i<array.length - 1; i++) {
+			if (array[i] != array[i + 1]) {
+				numbers[n++] = number + 1;
+				number = 0;
 			} else {
 				number++;
 			}
 		}
-		numbers[n] = number;
-	    numbers.sort((a, b) => b - a);
+		if (array[array.length - 1] == array[array.length - 2])
+			numbers[n] = number + 1;
+		else
+			numbers[n] = 1;
 
-	    if (numbers.length == 1)
-	    	return numbers[0];
-	    else if (numbers[0] == numbers[1])
-	    	return -1;
-	    else
-	    	return numbers[0];
+		let max_number = 0;
+		for (let i=0; i<numbers.length; i++) {
+			if (numbers[i] > max_number)
+				max_number = numbers[i];
+		}
+
+		let max_number_count = 0;
+		for (let i=0; i<numbers.length; i++) {
+			if (numbers[i] == max_number)
+				max_number_count++;
+		}
+
+		if (max_number_count > 1)
+			return -1;
+
+		let max_number_index = 0;
+		for (let i=0; i<numbers.length; i++) {
+			max_number_index += numbers[i];
+			if (numbers[i] == max_number)
+				break;
+		}
+		return array[max_number_index - 1];
 
 	}
 

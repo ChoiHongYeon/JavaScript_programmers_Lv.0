@@ -1,0 +1,31 @@
+<!-- 진료순서 정하기 (https://school.programmers.co.kr/learn/courses/30/lessons/120835?language=javascript) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	
+	function solution(emergency) {
+
+	    let sorted_emergency = emergency.concat();
+	    sorted_emergency.sort((a, b) => (b - a));
+	    var answer = [];
+	    for (let i=0; i<emergency.length; i++) {
+	    	answer[i] = sorted_emergency.indexOf(emergency[i]) + 1;
+	    }
+	    return answer;
+
+	}
+
+	document.write(solution([3, 76, 24]) + "<br>");
+	document.write(solution([1, 2, 3, 4, 5, 6, 7]) + "<br>");
+	document.write(solution([30, 10, 23, 6, 100]) + "<br>");
+
+</script>
+</html>

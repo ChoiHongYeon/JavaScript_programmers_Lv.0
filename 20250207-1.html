@@ -1,0 +1,29 @@
+<!-- 외계행성의 나이 (https://school.programmers.co.kr/learn/courses/30/lessons/120834?language=javascript) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	
+	function solution(age) {
+
+	    var answer = age.toString();
+	    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+	    for (let i=0; i<answer.length; i++) {
+	    	answer = answer.replace(answer.charAt(i), alphabet[parseInt(answer.charAt(i))]);
+	    }
+	    return answer;
+	}
+
+	document.write(solution(23) + "<br>");
+	document.write(solution(51) + "<br>");
+	document.write(solution(100) + "<br>");
+
+</script>
+</html>

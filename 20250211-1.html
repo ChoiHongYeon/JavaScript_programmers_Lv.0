@@ -1,0 +1,31 @@
+<!-- 팩토리얼 (https://school.programmers.co.kr/learn/courses/30/lessons/120848?language=javascript) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	
+	function solution(n) {
+
+		let i = 1;
+	    while (true) {
+	    	n /= i;
+	    	if (n < 1)
+	    		break;
+	    	i++;
+	    }
+
+	    return i - 1;
+
+	}
+
+	document.write(solution(3628800) + " " + solution(7));
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!-- 문자열 정렬하기 (1) (https://school.programmers.co.kr/learn/courses/30/lessons/120850?language=javascript) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	
+	function solution(my_string) {
+
+	    var answer = [];
+	    let a = 0;
+	    for (let i=0; i<my_string.length; i++) {
+	    	if (parseInt(my_string.charAt(i)) >= 0)
+	    		answer[a++] = parseInt(my_string.charAt(i));
+	    }
+	    answer.sort();
+
+	    return answer;
+
+	}
+
+	document.write(solution("hi12392") + "<br>");
+	document.write(solution("p2o4i8gj2") + "<br>");
+	document.write(solution("abcde0") + "<br>");
+
+</script>
+</html>

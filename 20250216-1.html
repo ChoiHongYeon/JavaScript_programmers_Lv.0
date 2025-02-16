@@ -1,0 +1,31 @@
+<!-- 저주의 숫자 3 (https://school.programmers.co.kr/learn/courses/30/lessons/120871?language=javascript) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	
+	function solution(n) {
+
+	    var answer = 0;
+	    for (let i=1; i<=n; i++) {
+	    	while (true) {
+	    		answer++;
+	    		if (answer % 3 != 0 && !answer.toString().includes('3'))
+	    			break;
+	    	}
+	    }
+
+	    return answer;
+	}
+
+	document.write(solution(15) + "<br>" + solution(40));
+
+</script>
+</html>
